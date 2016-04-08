@@ -1,0 +1,42 @@
+.player {
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  width: 50%;
+
+  /***************************************************************************\
+    SERVING INDICATOR
+  \***************************************************************************/
+  &:before {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: transparent;
+    content: 'Serving';
+    display: block;
+    font-size: 3em;
+    padding: 2rem;
+  }
+
+  &[data-serving]:before {
+    background-color: $serving;
+    color: inherit;
+  }
+
+  /***************************************************************************\
+    SCORE
+  \***************************************************************************/
+  .score {
+    font-size: 10rem;
+    margin-top: 2rem;
+
+    figcaption {
+      font-size: 3rem;
+    }
+  }
+}

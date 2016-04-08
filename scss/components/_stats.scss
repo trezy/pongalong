@@ -1,0 +1,87 @@
+.stats {
+  background-color: gray;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+  text-align: center;
+
+  header {
+    width: 100%;
+  }
+
+  > header {
+    font-size: 1.5em;
+    margin-top: 2rem;
+    position: relative;
+
+    &:before {
+      background-color: white;
+      content: '';
+      display: block;
+      left: 0;
+      height: 1px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      z-index: 1;
+    }
+
+    span {
+      background-color: gray;
+      display: inline-block;
+      padding: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  section {
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10rem;
+    padding-top: 8rem;
+    width: 50%;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .score {
+    color: $player1;
+    flex-grow: 1;
+    font-size: 2em;
+    margin-top: 1rem;
+    position: relative;
+
+    &:after {
+      bottom: 0;
+      color: white;
+      content: '-';
+      display: block;
+      left: 100%;
+      margin-left: -7px;
+      position: absolute;
+      top: 0;
+    }
+
+    &:last-child {
+      color: $player2;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    figcaption {
+      color: white;
+      font-size: 0.5em;
+      margin-top: 1rem;
+    }
+  }
+}

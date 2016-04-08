@@ -1,0 +1,10 @@
+{
+  "appId": "adorable-ping-pong-tracker",
+  "apiKey": "aa2051959616bf5e81aef558bcc969f07ee66eeb13f60d3e7ced1aaf31ba65fa",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

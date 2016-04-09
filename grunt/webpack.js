@@ -15,8 +15,8 @@ module.exports = {
     entry: './js/bootstrap.js',
 
     output: {
-      filename: 'app.js',
-      sourceMapFilename: 'app.js.map'
+      filename: 'dist/app.js',
+      sourceMapFilename: 'dist/app.js.map'
     },
 
     module: {

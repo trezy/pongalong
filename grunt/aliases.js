@@ -1,11 +1,12 @@
 module.exports = {
   default: [
     'build',
-    'connect',
+    'server',
     'watch'
   ],
 
   build: [
+    'clean',
     'buildCSS',
     'buildJS'
   ],
@@ -16,5 +17,10 @@ module.exports = {
 
   buildCSS: [
     'sass'
+  ],
+
+  server: [
+    'configureProxies:app',
+    'connect'
   ]
 }

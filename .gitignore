@@ -1,8 +1,4 @@
-app.js
-app.js.map
-app.css
-app.css.map
-
+dist
 bower_components
 node_modules
 

@@ -17,7 +17,6 @@ export default class Router extends Backbone.BaseRouter {
 
   onNavigate (routeData) {
     this.channel.trigger('before:navigate')
-    console.log('Routing!', routeData)
 
     routeData.linked.show(routeData.params)
 

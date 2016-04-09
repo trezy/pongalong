@@ -163,7 +163,6 @@ Backbone.Marionette.Region.prototype._restoreEl = function() {
 
 Backbone.Marionette.Region.prototype.attachHtml = function(view) {
   if (arguments[1]) {
-    console.log(view)
     this._replaceEl(view)
 
   } else {

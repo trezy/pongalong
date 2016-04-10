@@ -35,7 +35,10 @@ module.exports = {
 
     proxies: [
       {
-        context: '/api',
+        context: [
+          '/api',
+          '/auth'
+        ],
         headers: {
           'Authorization': 'Basic ' + new Buffer(stamplayConfig.appId + ':' + stamplayConfig.apiKey).toString('base64')
         },

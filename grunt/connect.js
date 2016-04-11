@@ -11,9 +11,8 @@ let stamplayConfig = require('../stamplay')
 module.exports = {
   app: {
     options: {
-      base: '.',
       middleware: function (connect, options) {
-        var directory, middlewares
+        var middlewares
 
         middlewares = [
           require('grunt-connect-proxy/lib/utils').proxyRequest,
@@ -40,7 +39,8 @@ module.exports = {
           '/auth'
         ],
         headers: {
-          'Authorization': 'Basic ' + new Buffer(stamplayConfig.appId + ':' + stamplayConfig.apiKey).toString('base64')
+//          Authorization: 'Basic ' + new Buffer(stamplayConfig.appId + ':' + stamplayConfig.apiKey).toString('base64')
+          host: 'adorable-ping-pong-tracker.stamplayapp.com'
         },
         host: 'adorable-ping-pong-tracker.stamplayapp.com',
         https: true
